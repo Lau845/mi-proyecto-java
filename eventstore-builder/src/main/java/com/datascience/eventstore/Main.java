@@ -12,13 +12,13 @@ public class Main {
     public static void main(String[] args) {
         Connection connection = null;
         try {
-            // 1. Configurar conexión JMS
+
             ConnectionFactory factory = new ActiveMQConnectionFactory(BROKER_URL);
             connection = factory.createConnection();
             connection.setClientID("EventStoreBuilder");
             connection.start();
 
-            // 2. Crear consumidores DURABLES
+
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
             MessageConsumer newsConsumer = createDurableSubscriber(session, "News", "NewsSubscriber");
@@ -26,7 +26,7 @@ public class Main {
 
             System.out.println("✅ Escuchando tópicos: News | Videos");
 
-            // 3. Procesamiento continuo
+
             while (true) {
                 processMessage(newsConsumer, "news");
                 processMessage(videosConsumer, "videos");
