@@ -11,6 +11,7 @@
     <modules>
         <module>news-feeder</module>
         <module>youtube-feeder</module>
+        <module>business-unit</module>
     </modules>
 
     <properties>
