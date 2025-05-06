@@ -12,6 +12,8 @@
         <module>news-feeder</module>
         <module>youtube-feeder</module>
         <module>business-unit</module>
+        <module>eventstore-builder</module>
+        <module>orchestrator</module>
     </modules>
 
     <properties>

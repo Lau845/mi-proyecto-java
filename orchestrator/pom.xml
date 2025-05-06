@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Coordenadas del proyecto -->
+    <parent>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>mi-proyecto-java</artifactId>
+        <version>22</version>
+    </parent>
+
+    <artifactId>orchestrator</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- Dependencia al módulo news-feeder -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>news-feeder</artifactId>
+            <version>22</version>
+        </dependency>
+        <!-- Dependencia al módulo youtube-feeder -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>youtube-feeder</artifactId>
+            <version>22</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin para ejecutar tu Main con mvn exec:java -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>com.tuempresa.orchestrator.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
