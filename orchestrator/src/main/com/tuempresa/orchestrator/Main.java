@@ -1,8 +1,7 @@
 package com.tuempresa.orchestrator;
-
-
-import newsfeeder.services.NewsApiService;
-import com.tuempresa.youtubefeeder.YoutubeApiService;
+import services.NewsApiService;
+// —— IMPORT CORRECTO PARA YOUTUBE‑Feeder ——
+import services.YoutubeApiService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,8 +22,8 @@ public class Main {
         String topic = sc.nextLine().trim();
 
         // Recuperamos los beans de cada módulo
-        NewsApiService news = ctx.getBean(NewsApiService.class);
-        YoutubeSApiervice yt = ctx.getBean(YoutubeApiService.class);
+        NewsService news = ctx.getBean(NewsService.class);
+        YoutubeService yt = ctx.getBean(YoutubeService.class);
 
         // Disparamos la búsqueda y publicación
         System.out.println("→ Buscando noticias de “" + topic + "”…");
