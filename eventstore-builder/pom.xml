@@ -39,7 +39,7 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>../../..</sourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
             <!-- Plugin principal para generar el JAR -->
             <plugin>
