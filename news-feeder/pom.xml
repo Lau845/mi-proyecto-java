@@ -37,12 +37,6 @@
             <version>3.45.1.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-client</artifactId>
-            <version>5.19.0</version>
-        </dependency>
-
         <!-- Dependencia para JSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -50,11 +44,7 @@
             <version>2.10.1</version>
         </dependency>
         <!-- Gson para parsear JSON -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.10.1</version>
-        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
